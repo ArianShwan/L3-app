@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/ArianShwan/L3-app#readme",
   "dependencies": {
-    "code-metrics-core": "github:ArianShwan/code-metrics-core#L3-development"
+    "code-metrics-core": "github:ArianShwan/code-metrics-core#L3-development",
+    "express": "^5.1.0",
+    "multer": "^2.0.2"
   }
 }
