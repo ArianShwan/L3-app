@@ -1,0 +1,22 @@
+{
+  "name": "l3-app",
+  "version": "1.0.0",
+  "description": "Code Metrics Dashboard",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArianShwan/L3-app.git"
+  },
+  "author": "Arian Shwan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ArianShwan/L3-app/issues"
+  },
+  "homepage": "https://github.com/ArianShwan/L3-app#readme",
+  "dependencies": {
+    "code-metrics-core": "github:ArianShwan/code-metrics-core#L3-development"
+  }
+}
