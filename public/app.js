@@ -1,0 +1,1 @@
+// Script for UI interactions and file uploads

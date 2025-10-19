@@ -4,6 +4,7 @@
   "description": "Code Metrics Dashboard",
   "main": "index.js",
   "scripts": {
+    "start": "node node_modules/code-metrics-core/test/analyzeGitRepo.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
