@@ -17,6 +17,9 @@
     "url": "https://github.com/ArianShwan/L3-app"
   },
   "homepage": "https://github.com/ArianShwan/L3-app#readme",
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "dependencies": {
     "code-metrics-core": "git+https://github.com/ArianShwan/code-metrics-core.git#L3-development",
     "express": "^5.1.0",
