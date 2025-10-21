@@ -12,10 +12,14 @@
         <h5>For developers, by developers</h5>
         <section class="upload-section">
             <div class="upload-area" id="uploadArea">
-                <p>Drag your repo and drop it below!</p>
-                <input type="file" id="fileInput" multiple>
+                <p>Enter your Git repository URL</p>
+                <input type="text" id="gitUrlInput" placeholder="https://github.com/username/repo.git" />
+                <button id="analyzeBtn">Analyze Repository</button>
             </div>
-            <div class="file-list" id="fileList"></div>
+            <div class="loading" id="loading" style="display: none;">
+                <p>Analyzing repository... This may take a moment.</p>
+            </div>
+            <div class="results" id="results"></div>
         </section>
     </main>
     <footer>
@@ -24,5 +28,6 @@
             <p>Created by <a href="https://github.com/ArianShwan">Arian Shwan</a></p>
         </div>
         </footer>
+    <script src="app.js"></script>
 </body>
 </html>

@@ -62,14 +62,17 @@ console.log(result);
 ### Analyze a GitHub Repository with analyzeGitRepo.js
 
 ```javascript
-// In test/analyzeGitRepo.js, change the repo URL:
-const repoUrl = 'https://github.com/username/repository.git';
+const { RepositoryAnalyzer } = require('code-metrics-core')
+const repoAnalyzer = new RepositoryAnalyzer()
 
-// Run:
-node test/analyzeGitRepo.js
+// Analyze a GitHub repo
+const results = await repoAnalyzer.analyzeRepository(
+  'https://github.com/user/repo.git',
+  { verbose: true }
+)
+
+console.log(results.summary)
 ```
-**Output:**
-![Exp on my friends repo](/docs/analyzeGitRepo-exp.png)
 
 ## API Documentation
 
