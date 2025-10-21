@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  
+
   const gitUrlInput = document.getElementById('gitUrlInput')
   const analyzeBtn = document.getElementById('analyzeBtn')
   const loading = document.getElementById('loading')
@@ -23,7 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
     analyzeBtn.disabled = true
 
     try {
-      // Send request to backend
       const response = await fetch('/api/analyze', {
         method: 'POST',
         headers: {
