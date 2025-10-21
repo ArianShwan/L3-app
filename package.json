@@ -4,7 +4,7 @@
   "description": "Code Metrics Dashboard",
   "main": "index.js",
   "scripts": {
-    "start": "node node_modules/code-metrics-core/test/analyzeGitRepo.js",
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -14,11 +14,11 @@
   "author": "Arian Shwan",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ArianShwan/L3-app/issues"
+    "url": "https://github.com/ArianShwan/L3-app"
   },
   "homepage": "https://github.com/ArianShwan/L3-app#readme",
   "dependencies": {
-    "code-metrics-core": "github:ArianShwan/code-metrics-core#L3-development",
+    "code-metrics-core": "^1.0.1",
     "express": "^5.1.0",
     "multer": "^2.0.2"
   }
