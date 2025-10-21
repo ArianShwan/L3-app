@@ -1,34 +1,95 @@
 .upload-section {
-    width: 384px;
+    width: 100%;
+    max-width: 800px;
     margin: 1rem auto;
     padding: 20px;
-    border: 2px dashed #cccccc00;
-    border-radius: 10px;
     text-align: center;
-    background-color: #f9f9f962;
+}
+
+.upload-area {
+    padding: 2rem;
+    border: 2px dashed rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    margin-bottom: 2rem;
+}
+
+.upload-area p {
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
 }
 
 body {
     font-family: 'Arial Rounded MT Bold', 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #0029de 0%, #6f429b 100%);
+    background: linear-gradient(135deg, #000000 0%, #0e5731 100%);
     min-height: 100vh;
     width: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
     overflow-x: hidden;
 }
 
-#fileInput {
-    padding: 10px;
-    cursor: pointer;
-    background-color: #f9f9f977;
-    border-radius: 15px;
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2rem 1rem 100px 1rem;
+    overflow-y: auto;
 }
 
-h1, h5 {
+#gitUrlInput {
+    width: 100%;
+    max-width: 500px;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+#gitUrlInput:focus {
+    border-color: #ffffff;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+#analyzeBtn {
+    padding: 12px 32px;
+    font-size: 1rem;
+    font-weight: 600;
+    background: linear-gradient(135deg, #ffffff 0%, #e0e0e0 100%);
+    color: #0029de;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+#analyzeBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+#analyzeBtn:active {
+    transform: translateY(0);
+}
+
+#analyzeBtn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+h1, h3 {
     color: #ffffff;
     text-align: center;
     margin-bottom: 20px;
@@ -66,4 +127,175 @@ footer {
 .footer-content a:hover {
     color: #a8b3ff;
     border-bottom-color: #a8b3ff;
+}
+
+/* Loading and Results Styles */
+.loading {
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.1rem;
+}
+
+.results {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    color: white;
+}
+
+.error {
+    background-color: rgba(255, 0, 0, 0.2);
+    border: 2px solid rgba(255, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin: 1rem 0;
+}
+
+.error h3 {
+    margin-top: 0;
+    color: #ff6b6b;
+}
+
+.summary-section {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.summary-section h2 {
+    margin-top: 0;
+    color: white;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 1rem;
+}
+
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.summary-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.summary-label {
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.summary-value {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: white;
+}
+
+.language-distribution {
+    margin-top: 1.5rem;
+}
+
+.language-distribution h3 {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.lang-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 0.8rem;
+    margin: 0.5rem 0;
+    border-radius: 8px;
+}
+
+.detailed-results {
+    margin-top: 2rem;
+}
+
+.detailed-results h2 {
+    color: white;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 1rem;
+}
+
+.file-result {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin: 1rem 0;
+}
+
+.file-result h3 {
+    color: white;
+    margin-top: 0;
+    word-break: break-all;
+}
+
+.file-stats {
+    margin-top: 1rem;
+}
+
+.file-stats p {
+    margin: 0.5rem 0;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.file-stats strong {
+    color: white;
+}
+
+.quality-score {
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-weight: bold;
+}
+
+.quality-good {
+    background-color: rgba(76, 175, 80, 0.3);
+    color: #4caf50;
+}
+
+.quality-medium {
+    background-color: rgba(255, 152, 0, 0.3);
+    color: #ff9800;
+}
+
+.quality-low {
+    background-color: rgba(244, 67, 54, 0.3);
+    color: #f44336;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .upload-section {
+        padding: 10px;
+    }
+
+    .upload-area {
+        padding: 1.5rem 1rem;
+    }
+
+    #gitUrlInput {
+        font-size: 0.9rem;
+    }
+
+    .summary-grid {
+        grid-template-columns: 1fr;
+    }
+
+    main {
+        padding: 1rem 0.5rem 100px 0.5rem;
+    }
 }
