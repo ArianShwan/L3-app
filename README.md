@@ -65,15 +65,22 @@ https://github.com/username/repository.git
 
 ```
 L3-app/
-├── public/              # Frontend files
+├── src/                # Backend source files
+│   ├── Server.js       # Express server class
+│   └── classes.js      # Business logic classes (AnalysisService, RequestValidator, AnalysisController)
+├── public/             # Frontend files
 │   ├── index.html      # Main HTML page
-│   ├── app.js          # Client-side JavaScript
-│   └── style.css       # Styling
+│   ├── app.js          # Application entry point
+│   ├── style.css       # Styling
+│   └── js/             # Frontend JavaScript classes
+│       ├── api-service.js     # API communication
+│       ├── ui-manager.js      # UI state management
+│       └── app-controller.js  # Main controller
 ├── docs/               # Documentation
 │   ├── Vision.md       # Project vision
 │   ├── Requirements.md # Requirements specification
 │   └── Reflection.md   # Clean Code reflection
-├── server.js           # Express server
+├── server.js           # Server entry point
 ├── package.json        # Dependencies and scripts
 └── README.md          # This file
 ```
