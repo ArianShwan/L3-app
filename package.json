@@ -22,6 +22,7 @@
   },
   "dependencies": {
     "code-metrics-core": "git+https://github.com/ArianShwan/code-metrics-core.git#main",
+    "cors": "^2.8.5",
     "express": "^5.1.0",
     "multer": "^2.0.2"
   }
