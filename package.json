@@ -21,7 +21,7 @@
     "node": ">=18.0.0"
   },
   "dependencies": {
-    "code-metrics-core": "github:ArianShwan/code-metrics-core#main",
+    "code-metrics-core": "github:ArianShwan/code-metrics-core",
     "cors": "^2.8.5",
     "express": "^5.1.0",
     "multer": "^2.0.2"
