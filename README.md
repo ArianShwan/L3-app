@@ -156,3 +156,4 @@ MIT License - see [LICENSE](LICENSE) file for details
 
 - Robert C. Martin's "Clean Code" principles
 - Linnaeus University - 1DV610 Software Quality course
+
