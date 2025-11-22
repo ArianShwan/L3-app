@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: l3-app
+    env: node
+    buildCommand: rm -rf node_modules && npm install
+    startCommand: node server.js
